@@ -75,7 +75,9 @@ const animals = [
     projectileSize: 9,
     projectileSpeed: 540,
     fireCooldown: 1.45,
-    cooldownTimer: 0
+    cooldownTimer: 0,
+    blinkColor: '#f6f6fb',
+    blinkDuration: 0.14
   },
   {
     key: 'dog',
@@ -88,9 +90,13 @@ const animals = [
     projectileSize: 11,
     projectileSpeed: 520,
     fireCooldown: 1.65,
-    cooldownTimer: 0
+    cooldownTimer: 0,
+    blinkColor: '#f1d0a6',
+    blinkDuration: 0.14
   }
 ];
+
+animals.forEach(resetAnimalBlink);
 
 // Dados das personagens jogáveis e respectivas vantagens
 const characters = {
@@ -103,7 +109,8 @@ const characters = {
     projectileColor: '#8ce0ff',
     projectileSize: 10,
     damageTaken: 0.75,
-    spriteKey: 'adrielle'
+    spriteKey: 'adrielle',
+    blinkColor: '#ffd9c5'
   },
   luca: {
     name: 'Luca',
@@ -114,7 +121,8 @@ const characters = {
     projectileColor: '#ffd166',
     projectileSize: 12,
     damageTaken: 1,
-    spriteKey: 'luca'
+    spriteKey: 'luca',
+    blinkColor: '#f8d9c0'
   }
 };
 
@@ -147,6 +155,21 @@ const starField = Array.from({ length: 90 }, () => ({
   twinkle: Math.random() * Math.PI * 2,
   twinkleSpeed: 0.6 + Math.random() * 0.6
 }));
+
+function randomBlinkDelay() {
+  return 2 + Math.random() * 3;
+}
+
+const playerBlink = {
+  timer: 0,
+  duration: 0.12,
+  nextBlink: randomBlinkDelay()
+};
+
+function resetAnimalBlink(animal) {
+  animal.blinkTimer = 0;
+  animal.nextBlink = 1.5 + Math.random() * 3;
+}
 
 const doubleShiftWindow = 350;
 let supportAutoFire = false;
@@ -217,6 +240,7 @@ function positionAnimals() {
     animal.x = player.x + player.width / 2 + animal.offsetX - animal.width / 2;
     animal.y = groundY - animal.height;
     animal.cooldownTimer = animal.fireCooldown * (0.4 + Math.random() * 0.8);
+    resetAnimalBlink(animal);
   });
 }
 
@@ -238,6 +262,12 @@ function resetGame(startImmediately = true) {
   player.vy = 0;
   player.onGround = true;
   player.fireCooldown = 0;
+  supportAutoFire = false;
+  lastShiftTap = 0;
+  keys.shift = false;
+  playerBlink.timer = 0;
+  playerBlink.nextBlink = randomBlinkDelay();
+  animals.forEach(resetAnimalBlink);
   positionAnimals();
   updateHUD();
   hideGameOver();
@@ -540,6 +570,30 @@ function fireSupportAnimals() {
     }
   });
   return fired;
+}
+
+function updateBlinkTimers(delta) {
+  if (playerBlink.timer > 0) {
+    playerBlink.timer = Math.max(0, playerBlink.timer - delta);
+  } else {
+    playerBlink.nextBlink -= delta;
+    if (playerBlink.nextBlink <= 0) {
+      playerBlink.timer = playerBlink.duration;
+      playerBlink.nextBlink = randomBlinkDelay();
+    }
+  }
+
+  animals.forEach(animal => {
+    if (animal.blinkTimer && animal.blinkTimer > 0) {
+      animal.blinkTimer = Math.max(0, animal.blinkTimer - delta);
+    } else {
+      animal.nextBlink = (animal.nextBlink ?? (1.5 + Math.random() * 3)) - delta;
+      if (animal.nextBlink <= 0) {
+        animal.blinkTimer = animal.blinkDuration ?? 0.12;
+        animal.nextBlink = 2 + Math.random() * 3;
+      }
+    }
+  });
 }
 
 // Simula gravidade, movimento e disparo do jogador
@@ -898,6 +952,7 @@ function drawPlayer() {
     ctx.fillStyle = '#ffffff';
     ctx.fillRect(player.x, player.y, player.width, player.height);
   }
+  drawPlayerBlink();
 }
 
 function drawAnimals() {
@@ -906,7 +961,57 @@ function drawAnimals() {
     if (sprite) {
       ctx.drawImage(sprite, animal.x, animal.y, animal.width, animal.height);
     }
+    drawAnimalBlink(animal);
   });
+}
+
+function blinkAmount(timer, duration) {
+  if (!timer || timer <= 0 || !duration) return 0;
+  const clamped = Math.max(0, Math.min(1, timer / duration));
+  const phase = 1 - clamped;
+  return Math.max(0, 1 - Math.abs(phase - 0.5) * 2);
+}
+
+function drawPlayerBlink() {
+  const amount = blinkAmount(playerBlink.timer, playerBlink.duration);
+  if (amount <= 0) return;
+  const character = characters[currentCharacterKey];
+  const eyelidWidth = player.width * 0.18;
+  const baseHeight = player.height * 0.16;
+  const closure = Math.max(1, baseHeight * amount);
+  const top = player.y + player.height * 0.28;
+  const leftX = player.x + player.width * 0.30;
+  const rightX = player.x + player.width * 0.54;
+  const color = character.blinkColor || '#ffd9c5';
+  ctx.fillStyle = color;
+  ctx.fillRect(leftX, top, eyelidWidth, closure);
+  ctx.fillRect(rightX, top, eyelidWidth, closure);
+  const lashHeight = Math.max(1, player.height * 0.012);
+  const lashY = top + Math.max(closure - lashHeight, 0);
+  ctx.fillStyle = 'rgba(20, 18, 32, ' + (0.25 + 0.35 * amount) + ')';
+  ctx.fillRect(leftX, lashY, eyelidWidth, lashHeight);
+  ctx.fillRect(rightX, lashY, eyelidWidth, lashHeight);
+}
+
+function drawAnimalBlink(animal) {
+  const duration = animal.blinkDuration || 0.12;
+  const amount = blinkAmount(animal.blinkTimer, duration);
+  if (amount <= 0) return;
+  const eyelidWidth = animal.width * 0.24;
+  const baseHeight = animal.height * 0.18;
+  const closure = Math.max(0.8, baseHeight * amount);
+  const top = animal.y + animal.height * 0.26;
+  const leftX = animal.x + animal.width * 0.24;
+  const rightX = animal.x + animal.width * 0.58;
+  const color = animal.blinkColor || '#f0d8c0';
+  ctx.fillStyle = color;
+  ctx.fillRect(leftX, top, eyelidWidth, closure);
+  ctx.fillRect(rightX, top, eyelidWidth, closure);
+  const lashHeight = Math.max(0.8, animal.height * 0.012);
+  const lashY = top + Math.max(closure - lashHeight, 0);
+  ctx.fillStyle = 'rgba(32, 30, 38, ' + (0.18 + 0.4 * amount) + ')';
+  ctx.fillRect(leftX, lashY, eyelidWidth, lashHeight);
+  ctx.fillRect(rightX, lashY, eyelidWidth, lashHeight);
 }
 
 function drawProjectiles() {
@@ -1025,6 +1130,7 @@ function loop(timestamp) {
   updateDifficulty(delta);
   updatePlayer(delta);
   updateAnimals(delta);
+  updateBlinkTimers(delta);
   updateProjectiles(delta);
   updateEnemies(delta);
   updateExplosions(delta);
@@ -1052,6 +1158,11 @@ loadImages()
 window.addEventListener('blur', () => {
   keys.left = keys.right = keys.up = keys.shoot = false;
   keys.shift = false;
+  supportAutoFire = false;
+  lastShiftTap = 0;
+  playerBlink.timer = 0;
+  playerBlink.nextBlink = randomBlinkDelay();
+  animals.forEach(resetAnimalBlink);
 });
 
 // Retoma a música ao voltar para o separador
@@ -1062,6 +1173,8 @@ window.addEventListener('visibilitychange', () => {
     playSound('music');
   }
 });
+
+
 
 
 
