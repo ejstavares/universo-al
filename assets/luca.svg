@@ -1,0 +1,37 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 190 230'>
+  <defs>
+    <linearGradient id='shirtBoy' x1='0%' y1='0%' x2='0%' y2='100%'>
+      <stop offset='0%' stop-color='#7fe2ff'/>
+      <stop offset='100%' stop-color='#3695ff'/>
+    </linearGradient>
+    <radialGradient id='skinBoy' cx='50%' cy='36%' r='62%'>
+      <stop offset='0%' stop-color='#ffe3ce'/>
+      <stop offset='100%' stop-color='#f7c8ac'/>
+    </radialGradient>
+    <linearGradient id='hairBoy' x1='0%' y1='0%' x2='100%' y2='100%'>
+      <stop offset='0%' stop-color='#1e2d59'/>
+      <stop offset='100%' stop-color='#2f437b'/>
+    </linearGradient>
+    <linearGradient id='shortsBoy' x1='0%' y1='0%' x2='0%' y2='100%'>
+      <stop offset='0%' stop-color='#20355f'/>
+      <stop offset='100%' stop-color='#162544'/>
+    </linearGradient>
+  </defs>
+  <rect width='190' height='230' fill='none'/>
+  <path d='M60 100 Q95 60 130 100 V182 Q130 204 95 204 Q60 204 60 182 Z' fill='url(#shirtBoy)' stroke='#2f7ad1' stroke-width='4' stroke-linejoin='round'/>
+  <path d='M68 178 Q95 194 122 178 L128 212 L62 212 Z' fill='#6ed4ff'/>
+  <path d='M82 138 H108 L112 168 H78 Z' fill='url(#shortsBoy)'/>
+  <circle cx='95' cy='76' r='44' fill='url(#skinBoy)'/>
+  <path d='M44 70 Q95 24 146 70 Q150 44 134 30 Q112 8 95 8 Q78 8 56 30 Q40 44 44 70 Z' fill='url(#hairBoy)'/>
+  <path d='M50 78 Q95 102 140 78 L140 96 Q95 116 50 96 Z' fill='url(#hairBoy)'/>
+  <ellipse cx='76' cy='80' rx='8.5' ry='9' fill='#1b1d30'/>
+  <ellipse cx='114' cy='80' rx='8.5' ry='9' fill='#1b1d30'/>
+  <circle cx='74' cy='78' r='2.2' fill='#ffffff'/>
+  <circle cx='112' cy='78' r='2.2' fill='#ffffff'/>
+  <path d='M82 94 Q95 102 108 94' stroke='#1b1d30' stroke-width='4.2' stroke-linecap='round' fill='none'/>
+  <path d='M72 126 Q95 136 118 126' stroke='#d9ecff' stroke-width='4' stroke-linecap='round' opacity='0.45'/>
+  <circle cx='64' cy='110' r='12' fill='#d9ecff' opacity='0.18'/>
+  <circle cx='126' cy='110' r='12' fill='#d9ecff' opacity='0.18'/>
+  <path d='M66 60 Q78 50 88 64' stroke='#ffe3ce' stroke-width='5' stroke-linecap='round'/>
+  <path d='M126 60 Q114 50 104 64' stroke='#ffe3ce' stroke-width='5' stroke-linecap='round'/>
+</svg>

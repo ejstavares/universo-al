@@ -1,0 +1,26 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 200'>
+  <defs>
+    <linearGradient id='house-wall' x1='0%' y1='0%' x2='0%' y2='100%'>
+      <stop offset='0%' stop-color='#ff9e7d'/>
+      <stop offset='100%' stop-color='#ff6f61'/>
+    </linearGradient>
+    <linearGradient id='house-roof' x1='0%' y1='0%' x2='0%' y2='100%'>
+      <stop offset='0%' stop-color='#402c51'/>
+      <stop offset='100%' stop-color='#1f1433'/>
+    </linearGradient>
+    <linearGradient id='house-door' x1='0%' y1='0%' x2='0%' y2='100%'>
+      <stop offset='0%' stop-color='#2d2a44'/>
+      <stop offset='100%' stop-color='#171325'/>
+    </linearGradient>
+  </defs>
+  <rect width='240' height='200' fill='none'/>
+  <polygon points='20,96 120,24 220,96' fill='url(#house-roof)' stroke='#140c1f' stroke-width='5'/>
+  <rect x='44' y='96' width='152' height='92' rx='8' fill='url(#house-wall)' stroke='#c85754' stroke-width='4'/>
+  <rect x='108' y='122' width='48' height='66' rx='6' fill='url(#house-door)' stroke='#0f0b1a' stroke-width='3'/>
+  <circle cx='140' cy='155' r='3' fill='#f4d58d'/>
+  <rect x='60' y='116' width='32' height='28' rx='4' fill='#ffffff' opacity='0.85'/>
+  <rect x='166' y='116' width='28' height='28' rx='4' fill='#ffffff' opacity='0.85'/>
+  <rect x='70' y='120' width='24' height='20' fill='rgba(102, 170, 255, 0.35)'/>
+  <rect x='170' y='120' width='20' height='20' fill='rgba(102, 170, 255, 0.35)'/>
+</svg>
+

@@ -1,0 +1,30 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'>
+  <defs>
+    <radialGradient id='fur' cx='40%' cy='40%' r='80%'>
+      <stop offset='0%' stop-color='#ffffff'/>
+      <stop offset='100%' stop-color='#e4e7f0'/>
+    </radialGradient>
+  </defs>
+  <rect width='200' height='200' fill='none'/>
+  <path d='M46 82 L32 18 78 48 Z' fill='#d6d9e5'/>
+  <path d='M154 82 L168 18 122 48 Z' fill='#d6d9e5'/>
+  <path d='M140 142 Q172 132 170 104 Q162 116 146 114 Z' fill='#2c313f' opacity='0.85'/>
+  <path d='M42 86 Q100 30 158 86 V140 Q158 170 100 170 Q42 170 42 140 Z' fill='url(#fur)' stroke='#cfd3df' stroke-width='4' stroke-linejoin='round'/>
+  <ellipse cx='100' cy='132' rx='34' ry='22' fill='#ffffff' stroke='#d6d9e5' stroke-width='3'/>
+  <circle cx='74' cy='102' r='12' fill='#ffffff'/>
+  <circle cx='126' cy='102' r='12' fill='#ffffff'/>
+  <circle cx='74' cy='102' r='6' fill='#151921'/>
+  <circle cx='126' cy='102' r='6' fill='#151921'/>
+  <circle cx='78' cy='98' r='2' fill='#ffffff'/>
+  <circle cx='130' cy='98' r='2' fill='#ffffff'/>
+  <path d='M96 116 Q100 122 104 116' stroke='#13151b' stroke-width='4' fill='none' stroke-linecap='round'/>
+  <path d='M68 144 Q100 158 132 144' stroke='#13151b' stroke-width='4' fill='none' stroke-linecap='round'/>
+  <path d='M60 116 L42 112' stroke='#13151b' stroke-width='3' stroke-linecap='round'/>
+  <path d='M60 122 L40 126' stroke='#13151b' stroke-width='3' stroke-linecap='round'/>
+  <path d='M140 116 L158 112' stroke='#13151b' stroke-width='3' stroke-linecap='round'/>
+  <path d='M140 122 L160 126' stroke='#13151b' stroke-width='3' stroke-linecap='round'/>
+  <path d='M94 56 Q100 34 122 52' stroke='#25293a' stroke-width='6' stroke-linecap='round'/>
+  <path d='M64 152 Q44 156 40 136 Q48 142 60 140 Q60 148 64 152 Z' fill='#d6d9e5' opacity='0.9'/>
+  <path d='M136 152 Q156 156 160 134 Q152 140 140 138 Q140 148 136 152 Z' fill='#d6d9e5' opacity='0.9'/>
+  <path d='M158 124 Q182 134 176 154 Q170 162 164 150 Q170 142 164 132 Z' fill='#2c313f' opacity='0.88'/>
+</svg>

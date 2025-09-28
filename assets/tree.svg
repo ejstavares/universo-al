@@ -1,0 +1,18 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 260'>
+  <defs>
+    <linearGradient id='tree-canopy' x1='0%' y1='0%' x2='0%' y2='100%'>
+      <stop offset='0%' stop-color='#4fe2a7'/>
+      <stop offset='60%' stop-color='#2a9d6a'/>
+      <stop offset='100%' stop-color='#1f6d4c'/>
+    </linearGradient>
+    <linearGradient id='tree-trunk' x1='0%' y1='0%' x2='0%' y2='100%'>
+      <stop offset='0%' stop-color='#7a4b2f'/>
+      <stop offset='100%' stop-color='#3f2315'/>
+    </linearGradient>
+  </defs>
+  <rect width='200' height='260' fill='none'/>
+  <path d='M92 160 L108 160 L120 238 Q100 248 80 238 Z' fill='url(#tree-trunk)' stroke='#2d170f' stroke-width='4' stroke-linejoin='round'/>
+  <path d='M40 158 Q18 120 42 92 Q26 64 54 52 Q64 18 102 26 Q122 0 150 22 Q184 20 176 66 Q198 88 178 118 Q190 144 164 162 Z' fill='url(#tree-canopy)' stroke='#145c43' stroke-width='4' stroke-linejoin='round'/>
+  <circle cx='80' cy='86' r='16' fill='rgba(255,255,255,0.16)'/>
+  <circle cx='134' cy='68' r='12' fill='rgba(255,255,255,0.12)'/>
+</svg>

@@ -1,0 +1,27 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 160'>
+  <defs>
+    <linearGradient id='dog-body' x1='0%' x2='100%' y1='0%' y2='100%'>
+      <stop offset='0%' stop-color='#ffcd8a'/>
+      <stop offset='100%' stop-color='#e08b3a'/>
+    </linearGradient>
+    <linearGradient id='dog-belly' x1='0%' x2='100%' y1='0%' y2='100%'>
+      <stop offset='0%' stop-color='#fff0d6'/>
+      <stop offset='100%' stop-color='#ffd8a8'/>
+    </linearGradient>
+  </defs>
+  <rect width='160' height='160' fill='none'/>
+  <path d='M42 66 L26 30 L48 34 L60 60 Z' fill='#b96a2c'/>
+  <path d='M118 66 L134 30 L112 34 L100 60 Z' fill='#b96a2c'/>
+  <path d='M40 66 Q80 38 120 66 V126 Q120 148 80 148 Q40 148 40 126 Z' fill='url(#dog-body)' stroke='#a4541d' stroke-width='4' stroke-linejoin='round'/>
+  <ellipse cx='80' cy='112' rx='28' ry='20' fill='url(#dog-belly)'/>
+  <circle cx='62' cy='90' r='10' fill='#fff'/>
+  <circle cx='98' cy='90' r='10' fill='#fff'/>
+  <circle cx='62' cy='90' r='5' fill='#2c1b18'/>
+  <circle cx='98' cy='90' r='5' fill='#2c1b18'/>
+  <path d='M72 94 Q80 106 88 94' fill='#2c1b18'/>
+  <path d='M60 120 Q80 134 100 120' stroke='#2c1b18' stroke-width='4' fill='none' stroke-linecap='round'/>
+  <path d='M52 136 Q32 136 30 118 Q36 120 42 116 Q44 132 52 136 Z' fill='#b96a2c' opacity='0.8'/>
+  <path d='M108 136 Q128 136 130 118 Q124 120 118 116 Q116 132 108 136 Z' fill='#b96a2c' opacity='0.8'/>
+  <circle cx='52' cy='74' r='4' fill='#fff' opacity='0.5'/>
+  <circle cx='108' cy='74' r='4' fill='#fff' opacity='0.5'/>
+</svg>

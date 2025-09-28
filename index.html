@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang='pt'>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Universo AL</title>
+  <link rel='icon' href='assets/logo.svg' type='image/svg+xml'>
+  <link rel='stylesheet' href='style.css'>
+</head>
+<body>
+  <main class='layout'>
+    <aside class='info-panel'>
+      <header class='game-header'>
+        <img src='assets/logo.svg' alt='Mini logotipo Universo AL' class='game-logo'>
+        <div class='title-group'>
+          <h1>Universo AL (Adrielle &amp; Luca)</h1>
+          <p>Protege os amigos animais e derrota as naves inimigas neste universo noturno encantado.</p>
+        </div>
+      </header>
+
+      <section class='hud'>
+        <div class='hud-item'>Pontuação: <span id='score-value'>00000</span></div>
+        <div class='hud-item'>Melhor pontuação: <span id='best-score-value'>00000</span></div>
+        <div class='hud-item'>Vidas: <span id='lives-value'>3</span></div>
+        <div class='hud-item'>Personagem: <span id='character-name'>Adrielle</span></div>
+      </section>
+
+      <section class='instructions'>
+        <h2>Controlo</h2>
+        <ul>
+          <li>Movimento: setas ou WASD</li>
+          <li>Personagem: Espaço para disparar</li>
+          <li>Animais: Shift para disparar • Shift + Espaço para ataques combinados</li>
+          <li>Auto disparo dos animais: toca Shift duas vezes para ligar/desligar</li>
+          <li>Alternar personagem: tecla S</li>
+          <li>Protege o gato e o cão das naves espaciais!</li>
+        </ul>
+      </section>
+
+      <footer>
+        <p>Som ambiente: uma melodia calma para a noite de Cabo Verde.</p>
+      </footer>
+    </aside>
+
+    <section class='game-area'>
+      <div class='game-wrapper'>
+        <div id='background-stars'></div>
+        <canvas id='game-canvas' width='960' height='540'></canvas>
+        <div id='start-overlay' class='game-overlay'>
+          <h2>Bem-vindo ao Universo AL</h2>
+          <p>Clica em &quot;Iniciar&quot; para proteger a Adrielle, o Luca e os seus animais.</p>
+          <button id='start-button'>Iniciar</button>
+        </div>
+        <div id='game-over' class='game-overlay hidden'>
+          <h2>Fim de Jogo – Universo AL</h2>
+          <p>Aperta o botão abaixo para tentar novamente.</p>
+          <button id='restart-button'>Reiniciar</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src='game.js'></script>
+</body>
+</html>
+
+
