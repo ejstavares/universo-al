@@ -1,17 +1,37 @@
-<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 220'>
-  <rect width='160' height='220' fill='none'/>
-  <circle cx='80' cy='60' r='42' fill='#fcd9c8'/>
-  <path d='M38 58 Q80 14 122 58 Q126 34 108 20 Q90 6 80 6 Q70 6 52 20 Q34 34 38 58 Z' fill='#372a73'/>
-  <path d='M44 68 Q80 92 116 68 L116 86 Q80 104 44 86 Z' fill='#372a73'/>
-  <circle cx='64' cy='62' r='8' fill='#221c3f'/>
-  <circle cx='96' cy='62' r='8' fill='#221c3f'/>
-  <circle cx='62' cy='60' r='2.4' fill='#ffffff'/>
-  <circle cx='94' cy='60' r='2.4' fill='#ffffff'/>
-  <path d='M68 78 Q80 86 92 78' stroke='#221c3f' stroke-width='4' fill='none' stroke-linecap='round'/>
-  <path d='M56 110 Q80 122 104 110' stroke='#ffc7e0' stroke-width='4' stroke-linecap='round' opacity='0.45'/>
-  <path d='M50 108 Q34 116 40 132 Q48 120 60 126' stroke='#ffc7e0' stroke-width='4' fill='none' opacity='0.4'/>
-  <path d='M110 126 Q122 120 130 132 Q136 116 120 108' stroke='#ffc7e0' stroke-width='4' fill='none' opacity='0.4'/>
-  <path d='M42 94 Q80 58 118 94 V180 Q118 204 80 204 Q42 204 42 180 Z' fill='#ff8cc2' stroke='#b84592' stroke-width='4' stroke-linejoin='round'/>
-  <path d='M54 174 Q80 190 106 174 L110 214 L50 214 Z' fill='#f5badc'/>
-  <path d='M68 132 H92 L96 166 H64 Z' fill='#2f1f4f'/>
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 260'>
+  <defs>
+    <linearGradient id='adrielleDress' x1='0%' y1='0%' x2='0%' y2='100%'>
+      <stop offset='0%' stop-color='#ff85a1'/>
+      <stop offset='100%' stop-color='#ff4f8c'/>
+    </linearGradient>
+    <linearGradient id='adrielleHair' x1='0%' y1='0%' x2='100%' y2='100%'>
+      <stop offset='0%' stop-color='#382461'/>
+      <stop offset='100%' stop-color='#20143b'/>
+    </linearGradient>
+    <linearGradient id='adrielleCape' x1='0%' y1='0%' x2='0%' y2='100%'>
+      <stop offset='0%' stop-color='#ffc8f1'/>
+      <stop offset='100%' stop-color='#f37bd4'/>
+    </linearGradient>
+  </defs>
+  <rect width='200' height='260' fill='none'/>
+  <path d='M56 98 Q98 50 142 98 V204 Q142 230 98 230 Q56 230 56 204 Z' fill='url(#adrielleDress)' stroke='#b52e6b' stroke-width='4' stroke-linejoin='round'/>
+  <path d='M72 90 C66 74 66 58 78 46 C92 30 120 28 134 48 C142 60 142 78 134 92' fill='none' stroke='rgba(255,255,255,0.55)' stroke-width='8' stroke-linecap='round'/>
+  <path d='M52 112 C34 144 32 184 54 206 C74 224 110 232 140 214 C162 200 166 160 146 124' fill='url(#adrielleCape)' opacity='0.65'/>
+  <circle cx='100' cy='78' r='46' fill='#ffd9c5'/>
+  <path d='M46 70 Q100 16 154 70 Q160 38 140 22 Q120 8 100 8 Q80 8 60 22 Q40 38 46 70 Z' fill='url(#adrielleHair)'/>
+  <path d='M52 82 Q100 110 148 82 L148 108 Q100 132 52 108 Z' fill='url(#adrielleHair)'/>
+  <ellipse cx='78' cy='86' rx='9.5' ry='10' fill='#1f1a2d'/>
+  <ellipse cx='122' cy='86' rx='9.5' ry='10' fill='#1f1a2d'/>
+  <circle cx='75' cy='84' r='2.6' fill='#ffffff'/>
+  <circle cx='119' cy='84' r='2.6' fill='#ffffff'/>
+  <path d='M84 108 Q100 118 116 108' stroke='#1f1a2d' stroke-width='5.2' stroke-linecap='round' fill='none'/>
+  <path d='M72 128 Q100 140 128 128' stroke='#ffd4ec' stroke-width='4' stroke-linecap='round' opacity='0.55'/>
+  <path d='M60 188 Q100 206 140 188' stroke='rgba(255,255,255,0.35)' stroke-width='4' stroke-linecap='round'/>
+  <path d='M84 152 H116 L120 190 H80 Z' fill='#281d45'/>
+  <path d='M72 204 L94 238 L78 238 Q60 236 58 216 Z' fill='#ffb7d7'/>
+  <path d='M128 204 L106 238 L122 238 Q140 236 142 216 Z' fill='#ffb7d7'/>
+  <path d='M68 64 Q76 58 84 64' stroke='#ffd9c5' stroke-width='5' stroke-linecap='round'/>
+  <path d='M116 64 Q124 58 132 64' stroke='#ffd9c5' stroke-width='5' stroke-linecap='round'/>
+  <path d='M48 138 Q40 156 48 168 Q54 174 62 172 Q54 162 60 146 Z' fill='#ff8ec2' opacity='0.55'/>
+  <path d='M152 138 Q160 156 152 168 Q146 174 138 172 Q146 162 140 148 Z' fill='#ff8ec2' opacity='0.55'/>
 </svg>

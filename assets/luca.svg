@@ -1,17 +1,34 @@
-<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 200'>
-  <rect width='160' height='200' fill='none'/>
-  <circle cx='80' cy='58' r='40' fill='#f8d9c0'/>
-  <path d='M38 54 Q80 18 122 54 Q126 34 112 22 Q92 6 80 6 Q68 6 48 22 Q34 34 38 54 Z' fill='#243a6b'/>
-  <path d='M44 64 Q80 88 116 64 L116 80 Q80 100 44 80 Z' fill='#243a6b'/>
-  <circle cx='64' cy='60' r='8' fill='#1d2233'/>
-  <circle cx='96' cy='60' r='8' fill='#1d2233'/>
-  <circle cx='62' cy='58' r='2' fill='#ffffff'/>
-  <circle cx='94' cy='58' r='2' fill='#ffffff'/>
-  <path d='M66 74 Q80 82 94 74' stroke='#1d2233' stroke-width='4' fill='none' stroke-linecap='round'/>
-  <path d='M54 102 Q80 114 106 102' stroke='#d7ecff' stroke-width='4' stroke-linecap='round' opacity='0.45'/>
-  <path d='M50 100 Q36 108 40 122 Q48 114 58 118' stroke='#d7ecff' stroke-width='4' fill='none' opacity='0.4'/>
-  <path d='M102 118 Q112 114 120 122 Q124 108 110 100' stroke='#d7ecff' stroke-width='4' fill='none' opacity='0.4'/>
-  <path d='M40 90 Q80 58 120 90 V174 Q120 194 80 194 Q40 194 40 174 Z' fill='#7ad6ff' stroke='#2f88d0' stroke-width='4' stroke-linejoin='round'/>
-  <path d='M52 170 Q80 184 108 170 L112 204 L48 204 Z' fill='#5cc4ff'/>
-  <path d='M64 130 H96 L100 160 H60 Z' fill='#233861'/>
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 220'>
+  <defs>
+    <linearGradient id='lucaShirt' x1='0%' y1='0%' x2='0%' y2='100%'>
+      <stop offset='0%' stop-color='#87e1ff'/>
+      <stop offset='100%' stop-color='#2e9cff'/>
+    </linearGradient>
+    <linearGradient id='lucaHair' x1='0%' y1='0%' x2='100%' y2='100%'>
+      <stop offset='0%' stop-color='#223a66'/>
+      <stop offset='100%' stop-color='#192745'/>
+    </linearGradient>
+    <linearGradient id='lucaShorts' x1='0%' y1='0%' x2='0%' y2='100%'>
+      <stop offset='0%' stop-color='#1f3357'/>
+      <stop offset='100%' stop-color='#172440'/>
+    </linearGradient>
+  </defs>
+  <rect width='180' height='220' fill='none'/>
+  <path d='M50 102 Q90 56 130 102 V182 Q130 204 90 204 Q50 204 50 182 Z' fill='url(#lucaShirt)' stroke='#1f73c6' stroke-width='4' stroke-linejoin='round'/>
+  <path d='M60 178 Q90 194 120 178 L126 212 L54 212 Z' fill='#5dd3ff'/>
+  <path d='M72 134 H108 L112 166 H68 Z' fill='url(#lucaShorts)'/>
+  <circle cx='90' cy='74' r='44' fill='#f8d9c0'/>
+  <path d='M40 70 Q90 20 140 70 Q144 44 126 28 Q106 10 90 10 Q74 10 54 28 Q36 44 40 70 Z' fill='url(#lucaHair)'/>
+  <path d='M46 80 Q90 106 134 80 L134 98 Q90 118 46 98 Z' fill='url(#lucaHair)'/>
+  <ellipse cx='72' cy='82' rx='9.2' ry='9.8' fill='#20283b'/>
+  <ellipse cx='108' cy='82' rx='9.2' ry='9.8' fill='#20283b'/>
+  <circle cx='70' cy='80' r='2.3' fill='#ffffff'/>
+  <circle cx='106' cy='80' r='2.3' fill='#ffffff'/>
+  <path d='M78 96 Q90 104 102 96' stroke='#20283b' stroke-width='4.4' stroke-linecap='round' fill='none'/>
+  <path d='M66 126 Q90 138 114 126' stroke='#d6edff' stroke-width='4' stroke-linecap='round' opacity='0.5'/>
+  <path d='M58 164 Q90 176 122 164' stroke='rgba(255,255,255,0.3)' stroke-width='4' stroke-linecap='round'/>
+  <path d='M62 60 Q72 52 82 62' stroke='#f8d9c0' stroke-width='5' stroke-linecap='round'/>
+  <path d='M98 60 Q108 52 118 60' stroke='#f8d9c0' stroke-width='5' stroke-linecap='round'/>
+  <path d='M52 116 Q38 130 44 148 Q50 155 60 152 Q52 140 58 124 Z' fill='#7fe1ff' opacity='0.5'/>
+  <path d='M128 116 Q142 130 136 148 Q130 155 120 152 Q128 140 122 126 Z' fill='#7fe1ff' opacity='0.5'/>
 </svg>
